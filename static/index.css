@@ -35,3 +35,22 @@ body {
     margin-top: 0;
   }
   
+  footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  footer a i {
+    color: #222;
+    transition: color 0.2s;
+  }
+  
+  footer a:hover i {
+    color: #aaa; 
+  }
+  
