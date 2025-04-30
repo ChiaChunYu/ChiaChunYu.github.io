@@ -14,6 +14,11 @@ body {
 .language-switch {
   text-align: right;
   margin-bottom: 20px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-top: 10px;
+  z-index: 10;
+  background: inherit;
 }
 
 .language-switch button {
@@ -52,8 +57,26 @@ h1.main-title {
 }
 
 p {
+  display: flex;
+  align-items: flex-start;
   margin: 0 0 15px 10px;
   font-size: 16px;
+  flex-wrap: wrap;
+}
+
+.item-time {
+  display: block;
+  min-width: 120px;
+  text-align: left;
+  color: #888;
+  font-size: 15px;
+  flex-shrink: 0;
+  word-break: break-all;
+}
+
+.item-desc {
+  flex: 1;
+  min-width: 0;
 }
 
 h1:first-of-type {
@@ -126,4 +149,47 @@ body.dark-mode .main-links a {
 body.dark-mode .main-links a:hover {
   color: #aaa;
   border-bottom: 1.5px solid #aaa;
+}
+
+@media (max-width: 600px) {
+  p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-time {
+    min-width: 0;
+    margin-bottom: 2px;
+  }
+  .language-switch {
+    text-align: left;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+  }
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.about-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #2c3e50;
+  border-radius: 4px;
+  margin-right: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.7;
+  min-width: 0;
+  word-break: break-word;
 }
